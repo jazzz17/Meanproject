@@ -1,0 +1,17 @@
+<form>
+USERNAME <input type="text" name="UserName"  [(ngModel)]='this.user.UserName' /> <br /><br>
+PASSWORD <input type="text" type="password" name="Password" [(ngModel)]='this.user.Password' /> <br /><br />
+<input
+type="button"
+value="SignIn"
+class="btn btn-success"
+(click)="login()"
+
+/>
+<input
+type="button"
+value="Cancel"
+class="btn btn-warning"
+(click)="cancel()"
+/>
+</form>

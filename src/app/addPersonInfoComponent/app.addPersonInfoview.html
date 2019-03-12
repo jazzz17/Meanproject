@@ -1,0 +1,186 @@
+<div className="container" align="left">
+    <font size="9" color="maroon"><i><b>Add your information here</b></i></font>
+    <div className="form-group">
+      <label htmlFor="PID">PID &nbsp;&nbsp;</label>
+      <input
+        type="text"
+        [(ngModel)]="personInfo.PID"
+        name="PID"
+      />  
+    </div>
+    <div className="form-group">
+      <label htmlFor="FirstName">First Name &nbsp;&nbsp;</label>
+      <input
+        type="text"
+        [(ngModel)]="personInfo.FirstName"
+        name="FirstName"
+      />
+    </div>
+    <div className="form-group">
+      <label htmlFor="MiddleName">Middle Name &nbsp;&nbsp;</label>
+      <input
+        type="text"
+        [(ngModel)]="personInfo.MiddleName"
+        name="MiddleName"
+      />
+    </div>
+    <div className="form-group">
+      <label htmlFor="LastName">Last Name &nbsp;&nbsp;</label>
+      <input
+        type="text"
+        [(ngModel)]="personInfo.LastName"
+        name="LastName"
+      />
+  </div>
+        <div className="form-group">
+          <label>Gender</label>
+          <br />
+          <select name="Gender" [(ngModel)]="personInfo.Gender">
+            <option value="">Select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+         <div className="form-group">
+          <label>Date of Birth&nbsp;&nbsp;</label>
+          <input
+            type="date"
+            [(ngModel)]="personInfo.DateOfBirth"
+            name="DateOfBirth"
+     
+          />
+        </div>
+        <div className="form-group">
+          <label>Age &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            [(ngModel)]="personInfo.Age"
+            name="Age"
+          />
+        </div>
+        <div className="form-group">
+          <label>Flat/Bunglow No. &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            [(ngModel)]="personInfo.Flat_BungalowNo"
+            name="Flat_BungalowNo"
+          />
+          </div>
+          <div className="form-group">
+          <label>Society Name &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            [(ngModel)]="personInfo.SocietyName"
+            name="SocietyName"
+          />
+          </div>
+        <div className="form-group">
+          <label>Street Name &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            [(ngModel)]="personInfo.StreetName_AreaName"
+            name="StreetName_AreaName"
+          />
+        </div>
+        <div className="form-group">
+          <label>City &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            name="City"
+            [(ngModel)]="personInfo.City"
+          />
+        </div>
+        <div className="form-group">
+          <label>State &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            [(ngModel)]="personInfo.State"
+            name="State"
+          />
+        </div>
+        <div className="form-group">
+          <label>Pincode &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            [(ngModel)]="personInfo.PinCode"
+            name="PinCode"
+          />
+        </div>
+        <div className="form-group">
+          <label>Phone No &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            [(ngModel)]="personInfo.PhoneNo"
+            name="PhoneNo"
+          />
+        </div>
+        <div className="form-group">
+          <label>Mobile No &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            [(ngModel)]="personInfo.MobileNo"
+            name="MobileNo"
+          />
+        </div>
+        <div className="form-group">
+          <label>Physical Disability(if Any) &nbsp;&nbsp;</label> &nbsp;
+          <select
+            name="PhysicalDisability"
+            [(ngModel)]="personInfo.PhysicalDisability"
+          >
+            <option value="">Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label>Marital Status</label>
+          <br />
+          <select name="MaritalStatus" [(ngModel)]="personInfo.MaritalStatus" onChange={this.onChangeUser.bind(this)}>
+            <option value="">Select</option>
+            <option value="Married">Married</option>
+            <option value="Unmarried">Unmarried</option>
+            <option value="Divorced">Divorced</option>
+            <option value="Widow">Widow</option>
+            <option value="Widower">Widower</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label>Educational Status</label>
+          <br />
+          <select
+            name="EducationalStatus"
+            id="EducationalStatus"
+            [(ngModel)]="personInfo.EducationalStatus"
+          >
+            <option value="">Select</option>
+            <option value="PHD">PHD</option>
+            <option value="Graduate">Graduate</option>
+            <option value="Under-Graduate">Under-Graduate</option>
+            <option value="HSC">HSC</option>
+            <option value="SSC">SSC</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label>Birth Sign(if Any) &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            [(ngModel)]="personInfo.BirthSign"
+            name="BirthSign"
+          />
+        </div>
+        <div>
+          <input
+            type="button"
+            value="Save"
+            className="btn btn-success"
+            (click)="(onClickSave(e))"
+          />
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input
+            type="button"
+            value="Logout"
+            className="btn btn-danger"
+          />
+        </div>
+ </div>     

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <meta charset="utf-8">
+  </head>
+<div class="container">
+  <table class="table table-bordered table-striped" *ngIf="personInfoArr">
+    <thead>
+     <th>PID</th>
+     <th>FirstName</th>
+      <th>MiddleName</th>
+      <th>Gender</th>
+      <th>DateOfBirth</th>
+      <th>Age</th>
+      <th>City</th>
+      <th>State</th>
+      <th>PhoneNo</th>
+      <th>Approve</th>
+      <th>Reject</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of personInfoArr">
+        <td>{{ p.PID }}</td>
+        <td>{{ p.FirstName}}</td>
+        <td>{{ p.MiddleName}}</td>
+        <td>{{ p.Gender }}</td>
+        <td>{{ p.DateOfBirth }}</td>
+        <td> {{ p.Age}} </td>
+        <td>{{p.City}} </td>
+        <td>{{ p.State}}</td>
+        <td>{{p.PhoneNo}}</td>
+        <td><input type="button" value="Approve" (click)="(onApproveClick(p))"/></td>
+        <td><input type="button" value="Reject" (click)="(onRejectClick(p))"/></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

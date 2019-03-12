@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <meta charset="utf-8">
+  </head>
+  <div className="card" align="right">
+      <input type="text" name="searchbox" id="search" className="font-italic"  placeholder="Enter Personal Unique ID Here"/>
+      <button className="btn btn-primary"  name="search" (click)="(onSearchClicked(e))">Search</button>
+     </div>
+<div class="container">
+  <h2>Hello</h2>
+  <table class="table table-bordered table-striped" *ngIf="personArr">
+    <thead>
+     <th>PID</th>
+     <th>FirstName</th>
+      <th>MiddleName</th>
+      <th>Gender</th>
+      <th>DateOfBirth</th>
+      <th>Age</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of personArr">
+        <td>{{ p.PID }}</td>
+        <td>{{ p.FirstName}}</td>
+        <td>{{ p.MiddleName}}</td>
+        <td>{{ p.Gender }}</td>
+        <td>{{ p.DateOfBirth }}</td>
+        <td> {{ p.Age}} </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div className="form-group">
+    <table>
+      <tbody>
+        <tr>
+          <td>
+            <input
+              type="button"
+              value=" View New Requests"
+              className="btn btn-success"
+              (click) = "(navigateToRequest())"
+            />
+          </td>
+          <td>
+            <input
+              type="button"
+              value="Logout"
+              className="btn btn-danger"
+              onClick={this.logoutUser.bind(this)}
+            />
+          </td>
+
+          <td>
+            <input
+              type="button"
+              value="view Information request"
+              className="btn btn-warning"
+              (click)="(navigateToInfoRequest())"
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </html>

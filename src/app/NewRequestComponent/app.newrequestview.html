@@ -1,0 +1,23 @@
+<div className="container">
+     <table className="table table-bordered table-striped" *ngIf="requestArr">
+       <thead>
+           <th>UserId</th>
+           <th>UserName</th>
+           <th>Password</th>
+           <th>Email</th>
+           <th>RoleId</th>
+           <th>Approve</th> <th>Reject</th>
+           </thead>
+           <tbody>
+              <tr *ngFor="let p of requestArr">
+                  <td>{{ p.UserId }}</td>
+                  <td>{{ p.UserName }}</td>
+                  <td>{{ p.Password}}</td>
+                  <td>{{ p.Email }}</td>
+                  <td>{{ p.RoleId }}</td>
+                  <td><input type="button" value="Approve" (click)="(onApproveClick(p))"/></td>
+                  <td><input type="button" value="Reject" (click)="(onRejectClick(p))"/></td>
+                </tr>
+            </tbody>
+           </table>
+           </div>

@@ -1,0 +1,205 @@
+<div className="container" align="left">
+    <font size="9" color="maroon"><i><b>Update your information here</b></i></font>
+    <div className="form-group">
+      <label htmlFor="PID">PID &nbsp;&nbsp;</label>
+      <input
+        type="text"
+        id="PID"
+        [(ngModel)]="this.fuser.PID"
+        name="PID"
+      />
+    </div>
+    <div className="form-group">
+      <label htmlFor="FirstName">First Name &nbsp;&nbsp;</label>
+      <input
+        type="text"
+        id="FirstName"
+        [(ngModel)]="this.fuser.FirstName"
+        name="FirstName"
+      />
+    </div>
+    <div className="form-group">
+      <label htmlFor="MiddleName">Middle Name &nbsp;&nbsp;</label>
+      <input
+        type="text"
+        id="MiddleName"
+        [(ngModel)]="this.fuser.MiddleName"
+        name="MiddleName"
+      />
+    </div>
+    <div className="form-group">
+      <label htmlFor="LastName">Last Name &nbsp;&nbsp;</label>
+      <input
+        type="text"
+        id="LastName"
+        [(ngModel)]="this.fuser.LastName"
+        name="LastName"
+      />
+  </div>
+        <div className="form-group">
+          <label>Gender</label>
+          <br />
+          <select name="Gender" [(ngModel)]="this.fuser.Gender" id="Gender">
+            <option value="">Select</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+         <div className="form-group">
+          <label>Date of Birth&nbsp;&nbsp;</label>
+          <input
+            type="date"
+            [(ngModel)]="this.fuser.DateOfBirth"
+            name="DateOfBirth"
+            id="DateOfBirth"
+     
+          />
+        </div>
+        <div className="form-group">
+          <label>Age &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            [(ngModel)]="this.fuser.Age"
+            name="Age"
+            id="Age"
+          />
+        </div>
+        <div className="form-group">
+          <label>Flat/Bunglow No. &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            id="Flat_BungalowNo"
+            [(ngModel)]="this.fuser.Flat_BungalowNo"
+            name="Flat_BungalowNo"
+          />
+          </div>
+          <div className="form-group">
+          <label>Society Name &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            id="SocietyName"
+            [(ngModel)]="this.fuser.SocietyName"
+            name="SocietyName"
+          />
+          </div>
+        <div className="form-group">
+          <label>Street Name &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            id="StreetName_AreaName"
+            [(ngModel)]="this.fuser.StreetName_AreaName"
+            name="StreetName_AreaName"
+          />
+        </div>
+        <div className="form-group">
+          <label>City &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            id="City"
+            name="City"
+            [(ngModel)]="this.fuser.City"
+          />
+        </div>
+        <div className="form-group">
+          <label>State &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            id="State"
+            [(ngModel)]="this.fuser.State"
+            name="State"
+          />
+        </div>
+        <div className="form-group">
+          <label>Pincode &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            id="PinCode"
+            [(ngModel)]="this.fuser.PinCode"
+            name="PinCode"
+          />
+        </div>
+        <div className="form-group">
+          <label>Phone No &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            id="PhoneNo"
+            [(ngModel)]="this.fuser.PhoneNo"
+            name="PhoneNo"
+          />
+        </div>
+        <div className="form-group">
+          <label>Mobile No &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            id="MobileNo"
+            [(ngModel)]="this.fuser.MobileNo"
+            name="MobileNo"
+          />
+        </div>
+        <div className="form-group">
+          <label>Physical Disability(if Any) &nbsp;&nbsp;</label> &nbsp;
+          <select
+            name="PhysicalDisability"
+            [(ngModel)]="this.fuser.PhysicalDisability"
+            name="PhysicalDisability"
+            id="PhysicalDisability"
+          >
+            <option value="">Select</option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label>Marital Status</label>
+          <br />
+          <select name="MaritalStatus" id="MaritalStatus"[(ngModel)]="this.fuser.MaritalStatus" onChange={this.onChangeUser.bind(this)}>
+            <option value="">Select</option>
+            <option value="Married">Married</option>
+            <option value="Unmarried">Unmarried</option>
+            <option value="Divorced">Divorced</option>
+            <option value="Widow">Widow</option>
+            <option value="Widower">Widower</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label>Educational Status</label>
+          <br />
+          <select
+            name="EducationalStatus"
+            id="EducationalStatus"
+            [(ngModel)]="this.fuser.EducationStatus"
+            name="EducationStatus"
+            id="EducationStatus"
+          >
+            <option value="">Select</option>
+            <option value="PHD">PHD</option>
+            <option value="Graduate">Graduate</option>
+            <option value="Under-Graduate">Under-Graduate</option>
+            <option value="HSC">HSC</option>
+            <option value="SSC">SSC</option>
+          </select>
+        </div>
+        <div className="form-group">
+          <label>Birth Sign(if Any) &nbsp;&nbsp;</label>
+          <input
+            type="text"
+            id="BirthSign"
+            [(ngModel)]="this.fuser.BirthSign"
+            name="BirthSign"
+          />
+        </div>
+        <div>
+          <input
+            type="button"
+            value="Update"
+            className="btn btn-success"
+            (click)="(onClickUpdate(e))"
+          />
+           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input
+            type="button"
+            value="Logout"
+            className="btn btn-danger"
+          />
+        </div>
+ </div>     
